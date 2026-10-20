@@ -1,3 +1,4 @@
+import { mount } from 'svelte'
 import { WithStreamlitConnection } from './streamlit'
 import Keycloak from './Keycloak.svelte'
 
@@ -6,7 +7,7 @@ import Keycloak from './Keycloak.svelte'
 // passing arguments from Python -> Component.
 //
 // You don't need to edit withStreamlitConnection (but you're welcome to!).
-const keycloakComponent = new WithStreamlitConnection({
+const keycloakComponent = mount(WithStreamlitConnection, {
     target: document.body,
     props: {
         /**

@@ -1,5 +1,5 @@
-declare namespace svelte.JSX {
-    interface HTMLProps<T> {
-        onloggedin?: (event: CustomEvent) => void
+declare namespace svelteHTML {
+    interface HTMLAttributes<T> {
+        'on:loggedin'?: (event: CustomEvent) => void
     }
 }
